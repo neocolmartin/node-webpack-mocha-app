@@ -1,0 +1,26 @@
+{
+  "name": "mcpapp-browser-ui",
+  "version": "1.0.0",
+  "description": "Menzies Client Portal - Browser UI",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && webpack --config webpack.config.js && cp src/index.html dist",
+    "clean": "rm -rf dist",
+    "lint": "eslint -c eslint-config.js src && eslint -c eslint-config-test.js test",
+    "test": "npm run lint && mocha-webpack --webpack-config webpack.config-test.js test/**/*.js",
+    "test:unit": "mocha-webpack --webpack-config webpack.config-test.js test/unit-tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Neocolrepository/Menzies_ClientPortal.git"
+  },
+  "author": "Martin Pain",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "mocha": "^3.2.0",
+    "mocha-webpack": "^0.7.0",
+    "webpack": "^2.3.2"
+  }
+}
