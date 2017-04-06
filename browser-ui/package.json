@@ -9,7 +9,7 @@
     "lint": "eslint -c eslint-config.js src && eslint -c eslint-config-test.js test",
     "test": "npm run lint && mocha-webpack --webpack-config webpack.config-test.js test/**/*.js",
     "test:unit": "mocha-webpack --webpack-config webpack.config-test.js test/unit-tests/**/*.js",
-    "test:ci": "npm run test -- --reporter xunit --reporter-options output=dist/reports/unit-tests.xml"
+    "test:ci": "ls && npm run test -- --reporter xunit --reporter-options output=dist/reports/unit-tests.xml"
   },
   "repository": {
     "type": "git",
